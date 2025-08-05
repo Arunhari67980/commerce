@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Product</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: "Sansation Light", sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header Styling */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 4px 30px; /* reduced vertical padding */
+      background-color: #fff;
+      /* border-bottom: 1px solid #eee; */ /* Removed the line */
+    }
+
+    .left-section {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .menu button {
+      font-size: 24px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding-right: 50px;
+    }
+
+    #hello {
+      font-size: 30px;
+      font-weight: bold;
+      margin: 0;
+      padding: 0;
+      padding-left: 100px; /* Increased from 50px to 100px */
+    }
+
+    .header-right {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+    }
+
+    .header-right input {
+      padding: 10px;
+      border: none;
+      border-bottom: 1px solid #ccc;
+      padding-right: 60px;
+    }
+
+    .header-right span {
+      cursor: pointer;
+    }
+
+    /* Product Section */
+    .product {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 20px;
+      flex-wrap: wrap;
+      min-height: 200px;
+    }
+
+    .product img {
+      width: 50%;
+      object-fit: cover;
+      height: 85vh;
+    }
+
+    .product-details {
+      width: 25%;
+      display: flex;
+      flex-direction: column;
+      height: 85vh;
+    }
+
+    .product-details h2 {
+      font-size: 20px;
+      margin-top: 70px;
+    }
+
+    .product-details p {
+      font-size: 16px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      padding-top: 30px;
+    }
+
+    .size-options button {
+      padding: 10px;
+      margin-top: 30px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      width: 89px;
+    }
+
+    .size-options button:hover {
+      background-color: #f8bbd0;
+      color: black;
+    }
+
+    .add-button {
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 40px;
+      margin-bottom: 20px;
+    }
+
+    .add-button:hover {
+      background-color: #f8bbd0;
+      color: black;
+    }
+
+    .info-sections p {
+      margin-top: 10px;
+      border-bottom: 1px solid #ccc;
+      padding: 20px 0;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .product img {
+        width: 100%;
+        height: auto;
+      }
+
+      .product-details {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      .size-options button {
+        padding: 8px 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .header-right {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+
+      .size-options {
+        flex-wrap: wrap;
+      }
+
+      .size-options button {
+        width: 45%;
+        margin: 5px 0;
+      }
+    }
+    .dropdown {
+         display: none; /* hide by default */
+         margin-bottom: 10px;
+         padding: 10px;
+         background-color: #f2f2f2;
+    }
+    #info1 {
+      cursor:pointer;
+      display: flex;
+      align-items: center; 
+      justify-content: space-between;
+    }
+    #arrow1 {
+      transition: transform 0.3s;
+    }
+</style>
+</head>
+<body>
+  <header>
+    <div class="left-section">
+      <div class="menu">
+        <button id="menu-btn" style="padding:0; background:none; border:none; cursor:pointer;">
+          <svg width="64" height="64" viewBox="0 0 48 48">
+            <rect x="8" y="13" width="32" height="1" rx="0.5" fill="#222"/>
+            <rect x="8" y="23" width="32" height="1" rx="0.5" fill="#222"/>
+            <rect x="8" y="33" width="32" height="1" rx="0.5" fill="#222"/>
+          </svg>
+        </button>
+      </div>
+      <h1 id="hello">ZYRAA</h1>
+    </div>
+    <div class="header-right">
+      <input type="text" placeholder="search">
+      <span>Login</span>
+      <span>Add to collection</span>
+    </div>
+  </header>
+  <main>
+    <section class="product">
+      <img src="pics/lenovo-1.jpg" alt="Product Image">
+      <div class="product-details">
+        <h2>Summer outfits for men | Summer wear</h2>
+        <p>₹2370.00 (inc of all taxes)</p>
+        <div class="size-options">
+          <button>M</button>
+          <button>L</button>
+          <button>XL</button>
+          <button>XXL</button>
+        </div>
+        <button class="add-button">ADD</button>
+        <div class="info-sections">
+          <p id="info1" style="cursor:pointer; display: flex; align-items: center; justify-content: space-between;">
+            Product Details
+            <span id="arrow1" style="transition: transform 0.3s;">&#9660;</span>
+          </p>
+          <div class="dropdown" id="dropdown1">
+            <p>This product is made of 100% cotton.</p>
+          </div>
+          <p id="info2" style="cursor:pointer; display: flex; align-items: center; justify-content: space-between;">
+            Delivery & Returns
+            <span style="font-size: 20px;">&#8250;</span>
+          </p>
+          <p id="info3" style="cursor:pointer; display: flex; align-items: center; justify-content: space-between;">
+            Payment Option
+            <span style="font-size: 20px;">&#8250;</span>
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script>
+  document.querySelector('.menu').addEventListener('click', function() {
+    window.location.href = '';
+  });
+  document.querySelector('.add-button').addEventListener('click', function() {
+    alert('Product added to cart!');
+  });
+  function toggleDropdown(infoId, dropdownId, arrowId) {
+    const dropdown = document.getElementById(dropdownId);
+    const arrow = document.getElementById(arrowId);
+    const isOpen = dropdown.style.display === 'block';
+    dropdown.style.display = isOpen ? 'none' : 'block';
+    arrow.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+  document.getElementById("info1").addEventListener("click", function() {
+    toggleDropdown("info1", "dropdown1", "arrow1");
+  });
+
+  // Add click handlers for info2 and info3
+  document.getElementById("info2").addEventListener("click", function() {
+    window.location.href = "payment.html"; // Change to your actual page
+  });
+  document.getElementById("info3").addEventListener("click", function() {
+    window.location.href = "finish.html"; // Change to your actual page
+  });
+</script>
+</body>
+</html>
