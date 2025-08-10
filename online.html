@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online payment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sansation:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        *{
+            text-decoration: none;
+        }
+        body{
+            background: #faf9f6;
+            font-family: 'Sansation', sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+        .heading a{
+            color:#191919;
+            padding:0px;
+            font-size: 50px; 
+            text-align: start;
+            padding-left:80px;
+        }
+        .heading{
+            display: flex;
+            font-size: 13px;
+            text-align: center;
+        }
+        .heading h2{
+            padding-left:150px;
+            color: slategrey;
+            text-align: center;
+        }
+        .left-section{
+            width:50%;
+            height:100%;
+        }
+        .right-section{
+            width:45%;
+            height:100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        .google{
+            display:flex;
+            align-items: center;
+            border: #191919 solid 1px;
+            gap:70px;
+            margin-top:20px;
+            border-radius:10px;
+            padding:5px;
+
+        }
+        .payment-section{
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 80%; 
+            margin: auto; 
+        }
+        #arrow1{
+            color: slategrey;
+            margin-left: 240px;
+        }
+        #arrow2{
+            color: slategrey;
+            margin-left: 259px;
+        }
+        #arrow3{
+            color: slategrey;
+            margin-left: 278px;
+        }
+        #arrow4{
+            color: slategrey;
+            margin-left: 228px;
+        }
+
+        .vertical{
+            width: 2px;
+            height: 95%;
+            background-color: #ccc;
+            position: absolute;
+            left: 50%;
+            top:20px;
+            bottom: 5px;
+            color: #191919;
+        }
+
+        .bank{
+            margin-left:70px;
+        }
+
+        .zyr{
+            font-size: 40px;
+            color: #191919;
+            font-weight: 300;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            height: 100vh;
+        }  
+        
+        .pay{
+            display:flex;
+            align-items: center;
+            gap:480px;
+            margin-top:20px;
+            padding:0px;
+        }
+        .pay h4{
+            color: #191919;
+            font-size: 20px;
+            font-weight: 100;
+            padding-left: 20px;
+        }
+        .pay button{
+            background-color: white;
+            color: #191919;
+            border: 1px solid #191919;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+       
+        
+    </style>
+    <div class="container">
+    <div class="left-section">
+        <div class="heading">
+            <a href="payment.html">&larr;</a>
+            <h2>Payment Methods</h2>
+              
+        </div>
+        <hr style="width: 80%; margin: auto; border: 1px solid #191919;"> 
+        <div class="payment-section">
+            <div class="google">
+                <img src="pics/googlepay.png" alt="Google Pay" width="50">
+                <h3>Google Pay</h3>
+                <span id="arrow1" style="font-size: 20px;color:#191919;">&rarr;</span>
+            </div>
+            <div class="google">
+                <img src="pics/phonepe.png" alt="PhonePe" width="50">
+                <h3>Phonepe</h3>
+                <span id="arrow2" style="font-size: 20px;color:#191919;">&rarr;</span>
+            </div>
+            <div class="google">
+                <img src="pics/paytm.jpg" alt="Google Pay" width="50">
+                <h3>Paytm</h3>
+                <span id="arrow3" style="font-size: 20px;color:#191919;">&rarr;</span>
+            </div>
+            <div class="google">
+                <img src="pics/netbank.jpg" alt="Google Pay" width="50">
+                <h3>Net Banking</h3>
+                <span id="arrow4" style="font-size: 20px;color:#191919;">&rarr;</span>
+            </div>
+
+
+
+        </div>
+        <div class="bank">
+            <h2>Add another bank</h2>
+        </div>
+        <div class="pay">
+             <h4>₹500/-</h4>
+             <a href="delivery.html"><button>payment</button></a>
+        </div>
+        <div class="vertical"></div>
+
+        
+    </div>
+    
+    
+
+    <div class="right-section">
+        
+        <div class="zyr">
+            <h2>Pay with Zyraa</h2></div>
+        </div>
+
+        </div>
+
+    
+</body>
+</html>
